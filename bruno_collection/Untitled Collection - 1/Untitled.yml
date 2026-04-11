@@ -1,0 +1,15 @@
+info:
+  name: Untitled
+  type: http
+  seq: 1
+
+http:
+  method: DELETE
+  url: http://localhost:9000/testAPI/user/69d688d3f57ffb280af2d0ce
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
