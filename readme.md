@@ -1,4 +1,4 @@
-Full Stack Web App – React + Node + MongoDB
+#Full Stack Web App – React + Node + MongoDB
 Description
 
 This project is a full-stack web application built with:
@@ -30,18 +30,9 @@ Database
 MongoDB Atlas
 Deployment
 Render (Static + Web Service)
- Project Structure
-project/
-│
-├── client/        # React frontend
-│
-├── api/           # Node/Express backend
-│   ├── routes/
-│   ├── models/
-│   └── app.js
-│
-└── README.md
- Environment Variables
+
+
+## Environment Variables
 Backend (api/.env)
 MONGO_URI=your_mongodb_connection_string
 SESSION_SECRET=your_secret_key
