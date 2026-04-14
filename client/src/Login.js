@@ -12,28 +12,25 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:9000/testAPI/login", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/testAPI/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({ name, password })
       });
-
+      console.log("API =", process.env.REACT_APP_API_URL);
       const data = await response.json();
 
       if (response.ok && data.exists) {
-        //   on stocke l'utilisateur
-            localStorage.removeItem("user");
-            localStorage.setItem("user", JSON.stringify({
-            id: data.id,
-            name: data.name,
-            age: data.age
-            }));
-            navigate("/hub");
+        localStorage.removeItem("user");
+        localStorage.setItem("user", JSON.stringify({
+          id: data.id,
+          name: data.name,
+          age: data.age
+        }));
 
-        //  redirection vers home
-        navigate("/Hub");
+        navigate("/hub");
       } else {
         setMessage("Invalid username or password");
       }
@@ -43,8 +40,7 @@ function Login() {
   };
 
   return (
-    <div className ='container'>
-
+    <div className="container">
       <h1>Login</h1>
 
       <form onSubmit={handleLogin}>

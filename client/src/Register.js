@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { useNavigate } from "react-router-dom";
 
 function Register() {
@@ -7,14 +6,14 @@ function Register() {
   const [age, setAge] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
-  
-    const navigate = useNavigate();
+
+  const navigate = useNavigate();
 
   const handleAddUser = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:9000/testAPI/user", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/testAPI/user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -33,7 +32,6 @@ function Register() {
         setName("");
         setAge("");
         setPassword("");
-        
         navigate("/login");
       } else {
         setMessage(data.error || "Error while adding user");
