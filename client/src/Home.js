@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
+
 
 function Home() {
   return (
@@ -9,11 +11,11 @@ function Home() {
 
       <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
         <Link to="/register">
-          <button>Register</button>
+          <Button variant ="contained">Register</Button>
         </Link>
 
         <Link to="/login">
-          <button>Login</button>
+          <Button variant = "contained">Login</Button>
         </Link>
       </div>
     </div>
