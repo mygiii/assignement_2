@@ -1,72 +1,45 @@
-#Full Stack Web App – React + Node + MongoDB
-Description
-
-This project is a full-stack web application built with:
-
-Frontend: React
-Backend: Node.js + Express
-Database: MongoDB Atlas
-Deployment: Render
-
-The app allows users to:
-
-Register an account
-Login securely
-Store user data in a MongoDB database
-Live Demo
-Frontend: https://client-gtow.onrender.com
-Backend API: https://assignement-2-i26x.onrender.com
-Tech Stack
-Frontend
-React
-Fetch API
-React Router
-Backend
-Node.js
-Express
-Mongoose
-CORS
-Database
-MongoDB Atlas
-Deployment
-Render (Static + Web Service)
+Rawad Hammoude 3199554 (back end), Sean Perales Ludden 3199613 (front end), Ayah El Aggadi 3199515 (backend/frontend)
 
 
-## Environment Variables
-Backend (api/.env)
-MONGO_URI=your_mongodb_connection_string
-SESSION_SECRET=your_secret_key
-CLIENT_URL=https://client-gtow.onrender.com
-PORT=9000
-Frontend (client/.env)
-REACT_APP_API_URL=https://assignement-2-i26x.onrender.com
- API Endpoints
- Register User
-POST /testAPI/user
+Project Overview :
 
-Body:
+This project is a web app inspired by old-school arcade games (8-bit style). The goal is to create a simple platform where users can register, log in, and play some classic games. The design is made to look like retro consoles, with pixel vibes and bright colors.
 
-{
-  "name": "test",
-  "age": 20,
-  "password": "1234"
-}
- Login
-POST /testAPI/login
+You can access the website here:
+https://client-gtow.onrender.com
 
-Body:
 
-{
-  "name": "test",
-  "password": "1234"
-}
- Get All Users
-GET /testAPI/user
- Testing (Bruno / Postman)
 
-Base URL:
+How it works :
 
-https://assignement-2-i26x.onrender.com
+When users arrive on the site, they can either create an account or log in. Once connected, they are redirected to a “Game Hub” where all the games are available.
+
+The session is handled using `localStorage`, so the user stays connected until they click the logout button.
+
+
+
+Available Games :
+
+The app currently includes three classic games:
+
+Snake grow -> the snake without crashing
+Pong play -> against a simple AI
+Tetris -> stack blocks and clear lines
+
+All games are built directly with React and JavaScript.
+
+
+
+Technologies Used :
+
+The frontend is built with React, using React Router for navigation and Material UI for styling.
+
+The backend uses Node.js and Express, and user data is stored in MongoDB Atlas.
+
+The whole project is deployed on Render.
+
+
+
 
 Example:
 
